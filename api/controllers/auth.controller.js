@@ -50,11 +50,25 @@ export const login = async (req, res) => {
 
     // Generate cookie token and send it to the user
 
-    res.setHeader('Set-Cookie', "test=" + "myValue");
+    // res.setHeader('Set-Cookie', "test=" + "myValue").json("success");
+
+
+    const age = 1000 * 60 * 60 * 24 * 7;
+
+    res
+    .cookie("test2", "myValue2", {
+        httpOnly: true,
+        // secure: true,
+        maxAge: age,
+    })
+    .status(200)
+    .json({ message: 'Login successful!' });
     } catch(err) {
-        console.log(first)
+        console.log(err);
         res.status(500).json({ message: 'Failed to login!' });
     }
 }
 
-export const logout = (req, res) => {}
+export const logout = (req, res) => {
+    // db operations
+}
