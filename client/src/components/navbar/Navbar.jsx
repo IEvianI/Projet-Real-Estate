@@ -19,10 +19,10 @@ function Navbar() {
       <div className="left">
         <a href="/" className="logo">
           <img src="/logo.png" alt="" />
-          <span>LamaEstate</span>
+          <span>EvianEstate</span>
         </a>
-        <a href="/">Home</a>
-        <a href="/">About</a>
+        <a href="/">Accueil</a>
+        <a href="/">A propos</a>
         <a href="/">Contact</a>
         <a href="/">Agents</a>
       </div>
@@ -38,9 +38,9 @@ function Navbar() {
           </div>
         ) : (
           <>
-            <a href="/login">Sign in</a>
+            <a href="/login">Se connecter</a>
             <a href="/register" className="register">
-              Sign up
+              S'inscrire
             </a>
           </>
         )}
